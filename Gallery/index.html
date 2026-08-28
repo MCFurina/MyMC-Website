@@ -24,10 +24,10 @@
             transition: background-color 0.2s ease;
         }
         .btn:hover{
-            background-color: rgba(255, 255, 255, 1.0);
+            background-color: rgba(255, 255, 255, 0.8);
         }
         .nav-item:hover{
-            background-color: rgba(255, 255, 255, 1.0);
+            background-color: rgba(255, 255, 255, 0.8);
         }
         @media (max-width: 768px) {
             .nav-items{
@@ -48,10 +48,10 @@
         </div>
     </a>
     <div style="position: absolute; left: 50%; transform: translateX(-50%); flex-direction: row; gap: 20px" class="nav-items">
-        <a style="text-decoration: none; color: inherit; font-size: 20px; border-radius: 8px; transition: background-color 0.2s ease;" href="../" class="nav-item">
+        <a style="text-decoration: none; color: inherit; font-size: 20px; border-radius: 8px; transition: background-color 0.2s ease; padding: 5px" href="../" class="nav-item">
             主页
         </a>
-        <a style="text-decoration: underline; color: darkmagenta; font-size: 20px">
+        <a style="text-decoration: none; color: inherit; font-size: 20px; border-radius: 8px; transition: background-color 0.2s ease; background-color: rgba(255, 255, 255, 0.8); padding: 5px">
             画廊
         </a>
     </div>
@@ -59,7 +59,7 @@
         <select onchange="window.location.href=this.value">
             <option value="">选择页面</option>
             <option value="../">首页</option>
-            <option value="">画廊</option>
+            <option value="./">画廊</option>
         </select>
     </label>
 </nav>
