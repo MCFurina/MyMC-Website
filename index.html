@@ -12,6 +12,23 @@
         .nav-menu{
             display: none;
         }
+        .btn{
+            padding: 20px;
+            width: fit-content;
+            text-decoration: none;
+            color: inherit;
+            border-radius: 8px;
+            font-size: 16px;
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: background-color 0.2s ease;
+        }
+        .btn:hover{
+            background-color: rgba(255, 255, 255, 1.0);
+        }
+        .nav-item:hover{
+            background-color: rgba(255, 255, 255, 1.0);
+        }
         @media (max-width: 768px) {
             .nav-items{
                 display: none;
@@ -34,7 +51,7 @@
             <a style="text-decoration: underline; color: darkmagenta; font-size: 20px">
                 主页
             </a>
-            <a style="text-decoration: none; color: inherit; font-size: 20px" href="./Gallery/">
+            <a style="text-decoration: none; color: inherit; font-size: 20px; border-radius: 8px; transition: background-color 0.2s ease;" href="./Gallery/" class="nav-item">
                 画廊
             </a>
         </div>
@@ -58,10 +75,10 @@
         </div>
     </div>
     <div style="display: flex; flex-direction: column; gap: 20px; text-align: center; align-items: center;">
-        <a style="background-color: rgba(255, 255, 255, 0.4); padding: 20px; width: fit-content; text-decoration: none; color: inherit; border-radius: 8px; font-size: 16px; backdrop-filter: blur(5px)" href="#" onclick="copyText(); return false;">
+        <a href="#" onclick="copyText(); return false;" class="btn">
             复制IP
         </a>
-        <a style="background-color: rgba(255, 255, 255, 0.4); padding: 20px; width: fit-content; text-decoration: none; color: inherit; border-radius: 8px; font-size: 16px; backdrop-filter: blur(5px)" href="https://qm.qq.com/q/Btq5z1WSHu" target="_blank">
+        <a href="https://qm.qq.com/q/Btq5z1WSHu" target="_blank" class="btn">
             加入QQ群
         </a>
         <div style="margin-top: 20px">
