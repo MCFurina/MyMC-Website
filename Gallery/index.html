@@ -9,9 +9,15 @@
         .nav-items{
             display: flex;
         }
+        .nav-menu{
+            display: none;
+        }
         @media (max-width: 768px) {
             .nav-items{
                 display: none;
+            }
+            .nav-menu{
+                display: flex;
             }
         }
     </style>
@@ -32,6 +38,13 @@
             画廊
         </a>
     </div>
+    <label style="margin-left: auto" class="nav-menu">
+        <select onchange="window.location.href=this.value">
+            <option value="">选择页面</option>
+            <option value="../">首页</option>
+            <option value="">画廊</option>
+        </select>
+    </label>
 </nav>
 <div style="text-align: center; margin-top: 100px;">
     <p style="font-size: 60px; color: white;">MyMC 画廊</p>
@@ -42,6 +55,9 @@
     <img style="max-width: 100%; height: auto" src="./Assets/Gallery/gallery1.png" alt="Login" width="1920" height="1080"/>
 </div>
 <footer style="margin-top: 500px; max-width: 1600px; height: 100px; margin-left: auto; margin-right: auto; display: flex; flex-direction: row; gap: 20px; text-align: center; align-items: center; background-color: rgba(255, 255, 255, 0.4); padding: 0 10px; border-radius: 8px; backdrop-filter: blur(5px)">
+    <a style="font-size: 30px">
+        MyMC服务器
+    </a>
     <a style="margin-left: auto">
         ©MCFurina 2026 版权所有
     </a>

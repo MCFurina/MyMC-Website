@@ -9,9 +9,15 @@
         .nav-items{
             display: flex;
         }
+        .nav-menu{
+            display: none;
+        }
         @media (max-width: 768px) {
             .nav-items{
                 display: none;
+            }
+            .nav-menu{
+                display: flex;
             }
         }
     </style>
@@ -32,6 +38,13 @@
                 画廊
             </a>
         </div>
+        <label style="margin-left: auto" class="nav-menu">
+            <select onchange="window.location.href=this.value">
+                <option value="">选择页面</option>
+                <option value="">首页</option>
+                <option value="./Gallery/">画廊</option>
+            </select>
+        </label>
     </nav>
     <div style="align-items: center; margin-top: 300px">
         <div style="text-align: center">
