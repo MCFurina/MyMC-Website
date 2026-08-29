@@ -64,29 +64,30 @@
         </label>
     </nav>
     <div style="align-items: center; text-align: center; margin-top: 300px">
-        <a style="font-size: 60px; color: white">MyMC<br></a>
-        <a style="font-size: 30px; color: white">一个Minecraft生存服务器<br></a>
+        <div style="font-size: 60px; color: white">MyMC | 我们的世界</div>
+        <div style="font-size: 50px; color: white; margin-top: 50px">一个纯净的Minecraft生存服务器</div>
+        <div style="color: white; font-size: 40px; margin-top: 30px">支持Java/基岩版</div>
     </div>
-    <div style="margin-top: 20px; text-align: center; align-items: center">
-        <a style="color: white; font-size: 30px">服务器IP：</a><br>
-        <a style="color: white; font-size: 25px">Java版</a><br>
-        <a style="color: white; font-size: 25px">mymcland.top</a>
-        <a href="#" onclick="copyJavaIP(); return false;" class="btn" style="padding: 5px">
-            复制
-        </a><br>
-        <a style="color: white; font-size: 25px">基岩版</a><br>
-        <a style="color: white; font-size: 25px">be.mymcland.top</a><br>
-        <a style="color: white; font-size: 25px">端口 40016</a><br>
+    <hr style="border: 1px solid #ffcccc; width: 1000px; margin: 20px auto">
+    <div style="margin-top: 35px; text-align: center; align-items: center">
+        <a style="color: white; font-size: 30px">服务器状态：</a><br>
+        <img style="margin-top: 20px; max-width: 100%; height: auto" src="https://motd.puddingkc.com/status.png?ip=mymcland.top&style=style5&language=zh" alt="MyMC服务器状态" width="900" height="130"/>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 20px; text-align: center; align-items: center; margin-top: 20px">
-        <a style="color: white; font-size: 25px">加入我们的QQ群，与玩家们随时交流</a>
+    <hr style="border: 1px solid #ffcccc; width: 1000px; margin: 20px auto">
+    <div style="margin-top: 35px; text-align: center; align-items: center">
+        <div style="color: white; font-size: 30px">IP地址：</div>
+        <div style="color: white; font-size: 25px; margin-top: 20px">Java版</div>
+        <div style="color: white; font-size: 25px; margin-top: 10px">mymcland.top<a href="#" onclick="copyJavaIP(this); return false;" class="btn" style="padding: 5px; color: black">复制</a></div>
+        <div style="color: white; font-size: 25px; margin-top: 20px">基岩版</div>
+        <div style="color: white; font-size: 25px; margin-top: 10px">be.mymcland.top<a href="#" onclick="copyBedrockIP(this); return false;" class="btn" style="padding: 5px; color: black">复制</a></div>
+        <div style="color: white; font-size: 25px; margin-top: 10px">端口 40016<a href="#" onclick="copyBedrockPort(this); return false;" class="btn" style="padding: 5px; color: black">复制</a></div>
+    </div>
+    <hr style="border: 1px solid #ffcccc; width: 1000px; margin: 20px auto">
+    <div style="display: flex; flex-direction: column; gap: 20px; text-align: center; align-items: center; margin-top: 35px">
+        <a style="color: white; font-size: 30px">玩家社区：</a>
         <a href="https://qm.qq.com/q/Btq5z1WSHu" target="_blank" class="btn">
             加入QQ群
         </a>
-    </div>
-    <div style="margin-top: 20px; text-align: center; align-items: center">
-        <a style="color: white; font-size: 30px">服务器状态：</a><br>
-        <img style="margin-top: 20px; max-width: 100%; height: auto" src="https://motd.puddingkc.com/status.png?ip=mymcland.top&style=style5&language=zh" alt="MyMC服务器状态" width="900" height="130"/>
     </div>
     <footer style="margin-top: 500px; max-width: 1600px; height: 100px; margin-left: auto; margin-right: auto; display: flex; flex-direction: row; gap: 20px; text-align: center; align-items: center; background-color: rgba(255, 255, 255, 0.4); padding: 0 10px; border-radius: 8px; backdrop-filter: blur(5px)">
         <a style="font-size: 30px">
@@ -99,14 +100,55 @@
 </body>
 </html>
 <script>
-    function copyJavaIP() {
+    function copyJavaIP(btn) {
 
         const textToCopy = "mymcland.top";
+        const originalText = btn.textContent;
 
         navigator.clipboard.writeText(textToCopy).then(() => {
-            alert("复制成功！");
+            btn.textContent = "复制成功"
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
         }).catch(() => {
-            alert("复制失败，请手动复制。");
+            btn.textContent = "复制失败"
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        });
+    }
+    function copyBedrockIP(btn) {
+
+        const textToCopy = "be.mymcland.top";
+        const originalText = btn.textContent;
+
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            btn.textContent = "复制成功"
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        }).catch(() => {
+            btn.textContent = "复制失败"
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        });
+    }
+    function copyBedrockPort(btn) {
+
+        const textToCopy = "40016";
+        const originalText = btn.textContent;
+
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            btn.textContent = "复制成功"
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        }).catch(() => {
+            btn.textContent = "复制失败"
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
         });
     }
 </script>
