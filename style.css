@@ -1,6 +1,17 @@
 button{
     cursor: pointer;
 }
+.nav-item{
+    text-decoration: none;
+    color: inherit; 
+    font-size: 20px; 
+    border-radius: 8px; 
+    transition: background-color 0.2s ease; 
+    padding: 5px;
+}
+.nav-item-selected{
+    background-color: rgba(255, 255, 255, 0.8);
+}
 .nav-item:hover{
     background-color: rgba(255, 255, 255, 0.8);
 }
