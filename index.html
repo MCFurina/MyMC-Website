@@ -41,7 +41,8 @@
     </div>
     <div style="margin-top: 70px" class="center-card">
         <a style="color: white; font-size: 30px; margin-right: auto">服务器状态</a><br>
-        <img style="margin-top: 20px; max-width: 100%; height: auto" src="https://motd.puddingkc.com/status.png?ip=mymcland.top&style=style5&language=zh" alt="MyMC Status" width="900" height="130"/>
+        <a style="color: white; font-size: 25px; margin-top: 10px">状态：<span id="onlineStatus">--</span></a>
+        <a style="color: white; font-size: 25px">在线人数：<span id="onlinePlayers">--</span> / <span id="maxPlayers">--</span></a>
     </div>
     <div style="margin-top: 70px" class="center-card">
         <div style="color: white; font-size: 30px; margin-right: auto">IP地址</div>
@@ -75,68 +76,4 @@
     </footer>
 </body>
 </html>
-<script>
-    function copyJavaIP(btn) {
-
-        const textToCopy = "mymcland.top";
-        const originalText = btn.textContent;
-
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            btn.textContent = "复制成功"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        }).catch(() => {
-            btn.textContent = "复制失败"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        });
-    }
-    function copyBedrockIP(btn) {
-
-        const textToCopy = "be.mymcland.top";
-        const originalText = btn.textContent;
-
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            btn.textContent = "复制成功"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        }).catch(() => {
-            btn.textContent = "复制失败"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        });
-    }
-    function copyBedrockPort(btn) {
-
-        const textToCopy = "40016";
-        const originalText = btn.textContent;
-
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            btn.textContent = "复制成功"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        }).catch(() => {
-            btn.textContent = "复制失败"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        });
-    }
-</script>
+<script src="./script.js"></script>
