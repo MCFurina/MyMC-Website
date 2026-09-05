@@ -42,6 +42,7 @@ button{
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
+    scroll-margin-top: 150px;
 }
 .btn{
     border: 1px solid gray;

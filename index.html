@@ -36,15 +36,16 @@
         <div style="font-size: 50px; color: white; margin-top: 30px">一个纯净的Minecraft生存服务器</div>
         <div style="color: white; font-size: 40px; margin-top: 30px">支持Java/基岩版</div>
     </div>
-    <div style="display: flex; flex-direction: row; margin-top: 20px; justify-content: center; gap: 20px">
+    <div style="display: flex; flex-direction: row; margin-top: 20px; justify-content: center; gap: 20px; flex-wrap: wrap;">
         <a class="btn" href="./Gallery/">前往画廊</a>
+        <a class="btn" href="#ip">查看IP地址</a>
     </div>
     <div style="margin-top: 70px" class="center-card">
         <a style="color: white; font-size: 30px; margin-right: auto">服务器状态</a>
         <a style="color: white; font-size: 25px; margin-top: 10px">状态：<span id="onlineStatus">--</span></a>
         <a style="color: white; font-size: 25px">在线人数：<span id="onlinePlayers">--</span> / <span id="maxPlayers">--</span></a>
     </div>
-    <div style="margin-top: 70px" class="center-card">
+    <div style="margin-top: 70px" class="center-card" id="ip">
         <div style="color: white; font-size: 30px; margin-right: auto">IP地址</div>
         <div style="color: white; font-size: 25px; margin-top: 20px">Java版</div>
         <div style="color: white; font-size: 25px; margin-top: 10px">mymcland.top<button onclick="copyJavaIP(this); return false;" class="btn" style="padding: 5px; color: black; margin-left: 5px">复制</button></div>
