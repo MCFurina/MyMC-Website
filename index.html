@@ -24,7 +24,7 @@
             </a>
         </div>
         <label style="margin-left: auto" class="nav-menu">
-            <select onchange="window.location.href=this.value">
+            <select onchange="window.location.href=this.value" id="page-select">
                 <option value="">选择页面</option>
                 <option value="./">首页</option>
                 <option value="./Gallery/">画廊</option>
@@ -37,8 +37,8 @@
         <div style="color: white; font-size: 40px; margin-top: 30px">支持Java/基岩版</div>
     </div>
     <div style="display: flex; flex-direction: row; margin-top: 20px; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <a class="btn" href="./Gallery/">前往画廊</a>
-        <a class="btn" href="#ip">查看IP地址</a>
+        <a class="btn" href="#community">加入社区</a>
+        <a class="btn" href="#ip">IP地址</a>
     </div>
     <div style="margin-top: 70px" class="center-card">
         <a style="color: white; font-size: 30px; margin-right: auto">服务器状态</a>
@@ -53,7 +53,7 @@
         <div style="color: white; font-size: 25px; margin-top: 10px">be.mymcland.top<button onclick="copyBedrockIP(this); return false;" class="btn" style="padding: 5px; color: black; margin-left: 5px">复制</button></div>
         <div style="color: white; font-size: 25px; margin-top: 10px">端口 40016<button onclick="copyBedrockPort(this); return false;" class="btn" style="padding: 5px; color: black; margin-left: 5px">复制</button></div>
     </div>
-    <div style="margin-top: 70px" class="center-card">
+    <div style="margin-top: 70px" class="center-card" id="community">
         <div style="color: white; font-size: 30px; margin-right: auto; margin-bottom: 20px">玩家社区</div>
         <a href="https://qm.qq.com/q/Btq5z1WSHu" target="_blank" class="btn">
             加入QQ群
