@@ -22,14 +22,32 @@
             <a href="./" class="nav-item nav-item-selected">
                 画廊
             </a>
+            <a href="https://docs.qq.com/aio/DS3Rvb0lQZVpRVXB5" target="_blank" class="nav-item">
+                文档
+                <svg class="external-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+                    <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/>
+                </svg>
+            </a>
         </div>
-        <label style="margin-left: auto" class="nav-menu">
-            <select onchange="window.location.href=this.value">
-                <option value="">选择页面</option>
-                <option value="../">首页</option>
-                <option value="./">画廊</option>
-            </select>
-        </label>
+        <details class="nav-menu" style="margin-left: auto; position: relative;">
+            <summary style="list-style: none; cursor: pointer; user-select: none;" class="btn">选择页面</summary>
+            <div style="position: absolute; top: 100%; right: 0; min-width: 140px; background: rgba(255, 192, 203, 1.0); border: solid 1px white; border-radius: 8px; padding: 10px; z-index: 10000; display: flex; flex-direction: column; gap: 10px;">
+                <a href="../" class="nav-item">
+                    主页
+                </a>
+                <a href="./" class="nav-item nav-item-selected">
+                    画廊
+                </a>
+                <a href="https://docs.qq.com/aio/DS3Rvb0lQZVpRVXB5" target="_blank" class="nav-item">
+                    文档
+                    <svg class="external-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+                        <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/>
+                    </svg>
+                </a>
+            </div>
+        </details>
     </nav>
     <div style="text-align: center; align-items: center; margin-top: 150px; display: flex; flex-direction: column; justify-content: center; gap: 20px">
         <a style="font-size: 60px; color: white;">欢迎来到画廊</a>
