@@ -101,6 +101,5 @@ button{
 }
 .use-flyin {
   opacity: 0;
-  z-index: 1;
   animation: flyin 0.5s ease forwards;
 }
