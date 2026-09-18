@@ -21,14 +21,6 @@ button{
 .nav-menu{
     display: none;
 }
-@media (max-width: 768px) {
-    .nav-items{
-        display: none;
-    }
-    .nav-menu{
-        display: flex;
-    }
-}
 .center-card{
     display: flex;
     flex-direction: column;
@@ -46,7 +38,7 @@ button{
 }
 .btn{
     border: 1px solid gray;
-    padding: 20px;
+    padding: 15px;
     width: fit-content;
     text-decoration: none;
     color: inherit;
@@ -72,9 +64,29 @@ button{
 .linktext:hover{
     border: 1px solid pink;
 }
-.gradient-text{
+.gradient-text-1{
     display: inline-block;
     background: linear-gradient(90deg, #7FE5D4, #FFFFFF);
     background-clip: text;
     color: transparent;
+}
+.title-text{
+    font-size: 60px;
+}
+.subtitle-text{
+    font-size: 50px;
+}
+@media (max-width: 768px) {
+    .nav-items{
+        display: none;
+    }
+    .nav-menu{
+        display: flex;
+    }
+    .title-text{
+        font-size: 50px;
+    }
+    .subtitle-text{
+        font-size: 40px;
+    }
 }
