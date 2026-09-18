@@ -1,52 +1,9 @@
     getServerStatus();
-    function copyJavaIP(btn) {
+    function copyButton(btn, copy) {
 
-        const textToCopy = "mymcland.top";
         const originalText = btn.textContent;
 
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            btn.textContent = "复制成功"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        }).catch(() => {
-            btn.textContent = "复制失败"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        });
-    }
-    function copyBedrockIP(btn) {
-
-        const textToCopy = "be.mymcland.top";
-        const originalText = btn.textContent;
-
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            btn.textContent = "复制成功"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        }).catch(() => {
-            btn.textContent = "复制失败"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        });
-    }
-    function copyBedrockPort(btn) {
-
-        const textToCopy = "40016";
-        const originalText = btn.textContent;
-
-        navigator.clipboard.writeText(textToCopy).then(() => {
+        navigator.clipboard.writeText(copy).then(() => {
             btn.textContent = "复制成功"
             btn.disabled = true;
             setTimeout(() => {
