@@ -3,10 +3,10 @@ button{
 }
 .nav-item{
     text-decoration: none;
-    color: inherit; 
-    font-size: 20px; 
-    border-radius: 8px; 
-    transition: background-color 0.2s ease; 
+    color: inherit;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
     padding: 5px;
 }
 .nav-item-selected{
