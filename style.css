@@ -59,6 +59,17 @@ button {
     margin-right: auto;
     scroll-margin-top: 150px;
 }
+.center-card-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    border: solid 1px gray;
+    border-radius: 8px;
+    background-color: rgba(252, 228, 236, 0.75);
+    padding: 15px;
+    transition: border 0.2s ease;
+}
 .btn {
     border: 1px solid gray;
     padding: 15px;
