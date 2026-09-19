@@ -69,6 +69,7 @@ button {
     background-color: rgba(252, 228, 236, 0.75);
     padding: 15px;
     transition: border 0.2s ease;
+    min-width: 300px;
 }
 .btn {
     border: 1px solid gray;
