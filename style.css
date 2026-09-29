@@ -60,6 +60,12 @@ button {
     margin-right: auto;
     scroll-margin-top: 150px;
 }
+.center-card-title {
+    color: white;
+    font-size: 30px;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
 .center-card-card {
     display: flex;
     flex-direction: column;
@@ -110,23 +116,6 @@ button {
 .subtitle-text {
     font-size: 50px;
 }
-@media (max-width: 768px) {
-    .nav-items {
-        display: none;
-    }
-    .nav-menu {
-        display: flex;
-    }
-    .title-text {
-        font-size: 50px;
-    }
-    .subtitle-text {
-        font-size: 40px;
-    }
-    .nav {
-        min-height: 48px;
-    }
-}
 @keyframes flyin {
     0% {
         transform: translateY(50px);
@@ -166,4 +155,27 @@ button {
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
+}
+@media (max-width: 768px) {
+    .nav-items {
+        display: none;
+    }
+    .nav-menu {
+        display: flex;
+    }
+    .title-text {
+        font-size: 50px;
+    }
+    .subtitle-text {
+        font-size: 40px;
+    }
+    .nav {
+        min-height: 48px;
+    }
+    .center-card {
+        width: 85%;
+    }
+    .center-card-title {
+        font-size: 25px;
+    }
 }
