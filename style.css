@@ -73,7 +73,11 @@ button {
     border-radius: 8px;
     background-color: rgba(252, 228, 236, 0.75);
     padding: 15px;
-    transition: border 0.2s ease;
+    transition: all 0.2s ease;
+}
+.center-card-card:hover {
+    border: solid 1px pink;
+    background-color: rgba(252, 228, 236, 0.85);
 }
 .btn {
     border: 1px solid gray;
