@@ -130,9 +130,11 @@ button {
 @keyframes flyin {
     0% {
         transform: translateY(50px);
+        filter: blur(8px);
     }
     100% {
         transform: translateY(0px);
+        filter: 0;
         opacity: 1;
     }
 }
