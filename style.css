@@ -127,34 +127,6 @@ button {
 .subtitle-text {
     font-size: 50px;
 }
-@keyframes flyin {
-    0% {
-        transform: translateY(50px);
-        filter: blur(8px);
-    }
-    100% {
-        transform: translateY(0px);
-        filter: 0;
-        opacity: 1;
-    }
-}
-.use-flyin {
-    opacity: 0;
-    animation: flyin 0.5s ease forwards;
-}
-@keyframes flyin2 {
-    0% {
-        transform: translateY(-50px);
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-.use-flyin2 {
-    opacity: 0;
-    animation: flyin2 0.5s ease forwards;
-}
 .footer {
     margin-top: 100px;
     margin-left: auto;
