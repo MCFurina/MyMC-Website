@@ -185,7 +185,8 @@ button {
         border-radius: 0;
     }
     .center-card {
-        width: 85%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .center-card-title {
         font-size: 25px;
