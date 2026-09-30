@@ -52,6 +52,7 @@ button {
     max-width: 1200px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.4);
+    color: white;
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 20px;
     margin-left: auto;
@@ -59,7 +60,6 @@ button {
     scroll-margin-top: 150px;
 }
 .center-card-title {
-    color: white;
     font-size: 30px;
     margin-right: auto;
     margin-bottom: 10px;
@@ -74,6 +74,7 @@ button {
     background-color: rgba(252, 228, 236, 0.75);
     padding: 15px;
     transition: all 0.2s ease;
+    color: black;
 }
 .center-card-card:hover {
     border: solid 1px pink;
@@ -89,6 +90,7 @@ button {
     font-size: 16px;
     background-color: rgba(252, 228, 236, 1.0);
     transition: background-color 0.2s ease, border 0.2s ease;
+    color: black;
 }
 .btn:hover {
     border: 1px solid black;
