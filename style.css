@@ -72,19 +72,19 @@ button {
     flex-direction: column;
     gap: 10px;
     text-align: center;
-    border: solid 1px gray;
+    border: solid 1px pink;
     border-radius: 8px;
-    background-color: rgba(252, 228, 236, 0.75);
+    background-color: rgba(252, 228, 236, 1.0);
     padding: 15px;
-    transition: background-color 0.2s ease, border 0.2s ease;
+    transition: border 0.2s ease, transform 0.2s ease;
     color: black;
 }
 .center-card-card:hover {
-    border: solid 1px pink;
-    background-color: rgba(252, 228, 236, 0.85);
+    border: solid 1px deeppink;
+    transform: translateY(-2px);
 }
 .btn {
-    border: 1px solid gray;
+    border: 1px solid pink;
     padding: 15px;
     width: fit-content;
     text-decoration: none;
@@ -92,14 +92,15 @@ button {
     border-radius: 8px;
     font-size: 16px;
     background-color: rgba(252, 228, 236, 1.0);
-    transition: background-color 0.2s ease, border 0.2s ease, opacity 0.2s ease;
+    transition: background-color 0.2s ease, border 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
     color: black;
 }
 .btn:hover {
-    border: 1px solid black;
+    border: 1px solid deeppink;
     background-color: rgba(248, 211, 223, 1.0);
 }
 .btn:active {
+    transform: translateY(2px);
     background-color: rgba(248, 170, 223, 1.0);
 }
 .btn:disabled {
