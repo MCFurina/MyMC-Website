@@ -83,7 +83,7 @@ button {
     border-radius: 8px;
     background-color: rgb(245, 245, 245);
     color: black;
-    border: 1px solid pink;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -108,7 +108,7 @@ button {
     color: black;
 }
 .btn {
-    border: 1px solid pink;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 15px;
     width: fit-content;
     text-decoration: none;
@@ -116,7 +116,7 @@ button {
     border-radius: 8px;
     font-size: 16px;
     background-color: rgba(252, 228, 236, 1.0);
-    transition: background-color 0.2s ease, border 0.2s ease;
+    transition: background-color 0.25s ease, border 0.25s ease, transform 0.25s ease;
     color: black;
 }
 .btn:hover {
