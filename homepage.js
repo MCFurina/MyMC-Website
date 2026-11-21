@@ -52,7 +52,7 @@ async function getServerStatus() {
         document.getElementById('maxPlayers').textContent = data.players.max;
         document.getElementById('serverMotd').textContent = data.pureMotd || '';
         const icon = document.getElementById('serverIcon');
-        if (data.icon && /^data:image\/\w+;base64,/.test(data.icon)) {
+        if (data.icon && /^data:image\/[a-z]+;base64,/.test(data.icon)) {
             icon.src = data.icon;
             icon.style.visibility = 'visible';
         } else {
