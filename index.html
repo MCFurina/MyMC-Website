@@ -8,35 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <nav class="nav">
-        <a href="./" class="nav-icon">
-            <img src="Assets/MyMC_64.png" class="nav-icon-logo" alt="MyMC Icon" width="64" height="64" />
-            <span class="nav-icon-text">MyMC</span>
-        </a>
-        <div class="nav-items">
-            <a href="./" class="nav-item nav-item-selected">
-                主页
+    <div class="nav-background">
+        <nav class="nav">
+            <a href="./" class="nav-icon">
+                <img src="Assets/MyMC_64.png" class="nav-icon-logo" alt="MyMC Icon" width="64" height="64" />
+                <span class="nav-icon-text">MyMC</span>
             </a>
-            <a href="./Gallery/" class="nav-item">
-                画廊
-            </a>
-            <a href="https://docs.qq.com/aio/DS3Rvb0lQZVpRVXB5" target="_blank" class="nav-item">
-                文档与规则
-                <svg class="external-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-                    <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/>
-                </svg>
-            </a>
-        </div>
-        <details class="nav-menu" style="margin-left: auto; position: relative;">
-            <summary style="list-style: none; cursor: pointer; user-select: none;" class="btn">选择页面</summary>
-            <div class="nav-menu-open">
-                <a href="./" class="nav-item nav-item-selected">
-                    主页
-                </a>
-                <a href="./Gallery/" class="nav-item">
-                    画廊
-                </a>
+            <div class="nav-items">
+                <a href="./" class="nav-item nav-item-selected">主页</a>
+                <a href="./Gallery/" class="nav-item">画廊</a>
                 <a href="https://docs.qq.com/aio/DS3Rvb0lQZVpRVXB5" target="_blank" class="nav-item">
                     文档与规则
                     <svg class="external-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
@@ -45,8 +25,22 @@
                     </svg>
                 </a>
             </div>
-        </details>
-    </nav>
+            <details class="nav-menu" style="margin-left: auto; position: relative;">
+                <summary style="list-style: none; cursor: pointer; user-select: none;" class="btn">选择页面</summary>
+                <div class="nav-menu-open">
+                    <a href="./" class="nav-item nav-item-selected">主页</a>
+                    <a href="./Gallery/" class="nav-item">画廊</a>
+                    <a href="https://docs.qq.com/aio/DS3Rvb0lQZVpRVXB5" target="_blank" class="nav-item">
+                        文档与规则
+                        <svg class="external-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+                            <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+                            <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </details>
+        </nav>
+    </div>
     <div style="align-items: center; text-align: center; margin-top: 200px">
         <div style="color: pink" class="title-text">MyMC</div>
         <div style="margin-top: 40px;" class="subtitle-text">一个纯净的Minecraft生存服务器</div>

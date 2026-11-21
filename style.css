@@ -6,25 +6,26 @@ body {
 button {
     cursor: pointer;
 }
-.nav {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: solid 1px pink;
-    padding: 10px;
-    margin: 0 auto;
-    border-radius: 8px;
-    max-width: 1600px;
+.nav-background {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
-    min-height: 60px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-bottom: solid 1px pink;
     backdrop-filter: blur(8px);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    min-height: 60px;
+    gap: 16px;
 }
 .nav-icon {
     text-decoration: none;
@@ -87,6 +88,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: center;
 }
 .center-card {
     display: flex;
@@ -200,11 +202,6 @@ button {
     }
     .nav {
         min-height: 48px;
-        border-radius: 0;
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 1px solid pink;
     }
     .nav-icon-logo {
         display: none;
@@ -221,8 +218,8 @@ button {
     body {
         background: rgb(25, 25, 25);
     }
-    .nav {
-        background-color: rgba(0, 0, 0, 0.2);
+    .nav-background {
+        background-color: rgba(0, 0, 0, 0.75);
         color: white;
     }
     .nav-item-selected {
