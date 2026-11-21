@@ -237,17 +237,17 @@ button {
     .center-card {
         background: rgba(255, 255, 255, 0.1);
         color: white;
-        border: 1px solid transparent;
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
     .center-card-card {
         background: rgba(255, 255, 255, 0.1);
-        border: 1px solid transparent;
+        border: 1px solid rgba(255, 255, 255, 0.15);
         color: white;
     }
     .btn {
         background: rgba(255, 255, 255, 0.1);
         color: white;
-        border: 1px solid transparent;
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
     .btn:hover {
         background: rgba(255, 255, 255, 0.2);
@@ -256,7 +256,7 @@ button {
     .footer {
         color: white;
         background: rgba(255, 255, 255, 0.1);
-        border: 1px solid transparent;
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
     .center-label {
         color: white;

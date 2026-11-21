@@ -1,40 +1,67 @@
-    getServerStatus();
-    function copyButton(btn, copy) {
+getServerStatus();
+setInterval(getServerStatus, 30000); // 每30秒刷新
 
-        const originalText = btn.textContent;
+function manualRefresh(btn) {
+    btn.disabled = true;
+    btn.textContent = '刷新中...';
+    getServerStatus().finally(() => {
+        btn.disabled = false;
+        btn.textContent = '刷新';
+    });
+}
 
-        navigator.clipboard.writeText(copy).then(() => {
-            btn.textContent = "复制成功"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        }).catch(() => {
-            btn.textContent = "复制失败"
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-            }, 2000);
-        });
-    }
-    async function getServerStatus() {
-        try{
-            const response = await fetch('https://motd.minebbs.com/api/status?ip=mymcland.top');
-            const data = await response.json();
-            console.log('获取服务器状态成功：', data);
-            if (data.status == 'online') {
-                document.getElementById('onlineStatus').textContent = '在线';
-            } else {
-                document.getElementById('onlineStatus').textContent = '离线';
-            }
-            document.getElementById('onlinePlayers').textContent = data.players.online;
-            document.getElementById('maxPlayers').textContent = data.players.max;
-        } catch (error) {
-            console.error('获取服务器状态失败：', error);
-            document.getElementById('onlineStatus').textContent = '获取失败';
-            document.getElementById('onlinePlayers').textContent = '获取失败';
-            document.getElementById('maxPlayers').textContent = '获取失败';
+function copyButton(btn, copy) {
+    const originalText = btn.textContent;
+    btn.disabled = true;
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(copy).then(
+            () => done("复制成功"),
+            () => done("复制失败")
+        );
+    } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = copy;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            done("复制成功");
+        } catch {
+            done("复制失败");
         }
+        document.body.removeChild(textarea);
     }
+
+    function done(msg) {
+        btn.textContent = msg;
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+        }, 2000);
+    }
+}
+
+async function getServerStatus() {
+    try {
+        const response = await fetch('https://motd.minebbs.com/api/status?ip=mymcland.top');
+        const data = await response.json();
+        document.getElementById('onlinePlayers').textContent = data.players.online;
+        document.getElementById('maxPlayers').textContent = data.players.max;
+        document.getElementById('serverMotd').textContent = data.pureMotd || '';
+        const icon = document.getElementById('serverIcon');
+        if (data.icon && /^data:image\/\w+;base64,/.test(data.icon)) {
+            icon.src = data.icon;
+            icon.style.visibility = 'visible';
+        } else {
+            icon.style.visibility = 'hidden';
+        }
+    } catch (error) {
+        document.getElementById('onlinePlayers').textContent = '--';
+        document.getElementById('maxPlayers').textContent = '--';
+        document.getElementById('serverMotd').textContent = '';
+        document.getElementById('serverIcon').style.visibility = 'hidden';
+    }
+}
