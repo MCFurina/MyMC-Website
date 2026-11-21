@@ -33,11 +33,19 @@ button {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: border 0.25s ease;
+    border-radius: 8px;
+}
+.nav-icon:hover {
+    border: 1px solid pink;
 }
 .nav-icon-logo {
     vertical-align: middle;
     width: 32px;
     height: 32px;
+    border-radius: 4px;
 }
 .nav-icon-text {
     font-size: 20px;
