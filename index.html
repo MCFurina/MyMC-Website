@@ -51,18 +51,18 @@
     </div>
     <div style="margin-top: 70px;" class="center-card" id="status">
         <span class="center-card-title">服务器状态</span>
-        <span style="font-size: 25px;">IP地址</span>
-        <div style="font-size: 20px;">mymcland.top<button onclick="copyButton(this, 'mymcland.top')" class="btn" style="padding: 5px 10px; margin-left: 5px">复制</button></div>
-        <span style="font-size: 25px; margin-top: 20px;">图标和Motd</span>
+        <span style="font-size: 25px; margin-bottom: 10px;">IP地址</span>
+        <div style="font-size: 20px;">mymcland.top<button onclick="copyButton(this, 'mymcland.top')" class="btn" style="padding: 5px; margin-left: 5px">复制</button></div>
+        <span style="font-size: 25px; margin-top: 20px; margin-bottom: 10px;">图标和Motd</span>
         <div style="display: flex; flex-direction: row; align-items: center; gap: 12px;">
             <img id="serverIcon" src="" alt="" style="width: 64px; height: 64px; image-rendering: pixelated; border-radius: 8px; visibility: hidden;">
             <span id="serverMotd" style="font-size: 20px; white-space: pre-line;"></span>
         </div>
-        <span style="font-size: 25px; margin-top: 20px;">在线人数</span>
+        <span style="font-size: 25px; margin-top: 20px; margin-bottom: 10px;">在线人数</span>
         <span style="font-size: 20px;"><span id="onlinePlayers">--</span> / <span id="maxPlayers">--</span></span>
         <div style="margin-left: auto; display: flex; flex-direction: row; gap: 10px; align-items: center; margin-top: 20px;">
             <span>每 30 秒自动刷新一次</span>
-            <button onclick="manualRefresh(this)" class="btn" style="padding: 5px 10px;">刷新</button>
+            <button onclick="manualRefresh(this)" class="btn" style="padding: 5px;">刷新</button>
         </div>
     </div>
     <div style="margin-top: 70px;" class="center-card">
