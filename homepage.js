@@ -50,8 +50,10 @@ async function getServerStatus() {
         const data = await response.json();
         document.getElementById('onlinePlayers').textContent = data.players.online;
         document.getElementById('maxPlayers').textContent = data.players.max;
+        document.getElementById('serverMotd').style.color = 'inherit';
         document.getElementById('serverMotd').textContent = data.pureMotd || '';
         const icon = document.getElementById('serverIcon');
+        icon.style.display = 'inline';
         if (data.icon && /^data:image\/[a-z]+;base64,/.test(data.icon)) {
             icon.src = data.icon;
             icon.style.visibility = 'visible';
