@@ -61,7 +61,8 @@ async function getServerStatus() {
     } catch (error) {
         document.getElementById('onlinePlayers').textContent = '--';
         document.getElementById('maxPlayers').textContent = '--';
-        document.getElementById('serverMotd').textContent = '';
-        document.getElementById('serverIcon').style.visibility = 'hidden';
+        document.getElementById('serverMotd').textContent = '无法连接至服务器';
+        document.getElementById('serverMotd').style.color = 'red';
+        document.getElementById('serverIcon').style.display = 'none';
     }
 }
